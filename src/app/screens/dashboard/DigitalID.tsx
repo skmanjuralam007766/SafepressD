@@ -24,14 +24,14 @@ export const DigitalID = () => {
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
-      <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-slate-800 dark:text-slate-100">Digital Identity</h1>
+      <div className="flex justify-between items-center gap-3">
+        <h1 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100">Digital Identity</h1>
         <Button variant="outline" size="sm" className="gap-2" onClick={handleDownload}>
           <Download size={16} /> Download ID
         </Button>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
         {/* ID Card Front */}
         <motion.div 
           initial={{ rotateY: 90, opacity: 0 }}
@@ -39,7 +39,7 @@ export const DigitalID = () => {
           transition={{ duration: 0.6 }}
           className="relative perspective-1000"
         >
-          <div className="w-full aspect-[1.586] bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl overflow-hidden shadow-2xl relative text-white p-6 md:p-8 flex flex-col justify-between">
+          <div className="w-full aspect-[1.586] bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative text-white p-4 sm:p-6 md:p-8 flex flex-col justify-between">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10" 
                  style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '24px 24px' }}>
@@ -57,14 +57,14 @@ export const DigitalID = () => {
             </div>
 
             {/* Content */}
-            <div className="flex gap-4 md:gap-6 relative z-10 mt-6">
-              <div className="w-28 h-28 md:w-32 md:h-32 rounded-2xl bg-slate-700 border-2 border-slate-600 overflow-hidden shrink-0">
+            <div className="flex gap-3 sm:gap-4 md:gap-6 relative z-10 mt-4 sm:mt-6">
+              <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-xl sm:rounded-2xl bg-slate-700 border-2 border-slate-600 overflow-hidden shrink-0">
                 <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TUVOfGVufDB8fDB8fHww" alt="Profile" className="w-full h-full object-cover" />
               </div>
               <div className="space-y-3 flex-1 min-w-0">
                 <div>
                   <p className="text-blue-300 text-xs md:text-sm uppercase tracking-wider font-semibold">Name</p>
-                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-white">SK Manjur Alam</h3>
+                  <h3 className="text-base sm:text-xl md:text-2xl font-bold tracking-tight text-white">SK Manjur Alam</h3>
                 </div>
                 
                 <div>
@@ -85,7 +85,7 @@ export const DigitalID = () => {
             </div>
 
             {/* Footer */}
-            <div className="flex justify-between items-end relative z-10 mt-6">
+            <div className="flex justify-between items-end relative z-10 mt-4 sm:mt-6">
                <div>
                   <p className="text-blue-300 text-xs uppercase tracking-wider font-semibold">Aadhaar (Masked)</p>
                   <p className="font-mono text-sm md:text-base font-medium text-white">XXXX XXXX 8921</p>

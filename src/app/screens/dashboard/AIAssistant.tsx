@@ -46,7 +46,7 @@ export const AIAssistant = () => {
         </div>
       </div>
 
-      <div className="flex-1 bg-white dark:bg-slate-800 rounded-2xl lg:rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden flex flex-col min-h-[calc(100vh-12rem)] lg:min-h-0">
+      <div className="flex-1 bg-white dark:bg-slate-800 rounded-2xl lg:rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden flex flex-col min-h-[calc(100vh-14rem)] sm:min-h-[calc(100vh-12rem)] lg:min-h-0">
          {/* Chat Area */}
          <div className="flex-1 overflow-y-auto overflow-x-hidden p-3 sm:p-4 lg:p-6 space-y-3 sm:space-y-4">
             {messages.map((msg) => (
