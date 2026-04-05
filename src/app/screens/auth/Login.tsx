@@ -62,7 +62,7 @@ export const Login = () => {
   return (
     <Card className="w-full">
       <div className="text-center mb-8">
-        <h1 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-2">Welcome Back</h1>
+        <h1 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 mb-2">Welcome Back</h1>
         <p className="text-slate-500 dark:text-slate-400 text-sm">
           {step === 'id' ? "Enter your SafePress ID to continue" : "Enter the verification code"}
         </p>
@@ -105,13 +105,13 @@ export const Login = () => {
         </form>
       ) : (
         <form onSubmit={handleOtpSubmit} className="space-y-8">
-           <div className="flex justify-center gap-2">
+           <div className="flex justify-center gap-1.5 sm:gap-2">
             {otp.map((data, index) => (
               <input
                 key={index}
                 type="text"
                 maxLength={1}
-                className="w-10 h-12 sm:w-12 sm:h-14 text-center text-xl font-bold rounded-xl border border-slate-200 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:border-[#1976F3] focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 outline-none transition-all"
+                className="w-9 h-11 sm:w-12 sm:h-14 text-center text-lg sm:text-xl font-bold rounded-xl border border-slate-200 dark:border-slate-600 dark:bg-slate-700 dark:text-white focus:border-[#1976F3] focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 outline-none transition-all"
                 value={data}
                 onChange={(e) => handleOtpChange(e.target, index)}
                 onFocus={(e) => e.target.select()}
